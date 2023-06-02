@@ -1,10 +1,10 @@
 package automatron.data;
 
+import automatron.enums.Role;
+import automatron.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import automatron.enums.Role;
-import automatron.enums.Status;
 
 @Data
 @Builder

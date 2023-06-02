@@ -1,6 +1,6 @@
 package automatron.utils;
 
-import static automatron.BaseTest.token;
+import automatron.BaseTest;
 import automatron.data.User;
 import automatron.enums.Role;
 import automatron.enums.Status;
@@ -36,7 +36,7 @@ public class Utils {
         RestAssured.given()
             .baseUri(Config.baseUrl + "/accounting/users")
             .contentType(ContentType.JSON)
-            .header("Authorization", token)
+            .header("Authorization", BaseTest.token)
             .body(userToJson(user))
             .post()
             .then()

@@ -2,6 +2,7 @@ package automatron;
 
 import static automatron.testData.UserBuilder.owner;
 import static automatron.utils.Utils.userToJson;
+import automatron.testData.UserBuilder;
 import automatron.utils.Config;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
