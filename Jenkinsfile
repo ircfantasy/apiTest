@@ -3,15 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    try {
-                        sh "mvn --version"
-                    } catch (Exception e) {
-                        def mvnHome = tool 'Maven'
-                        sh "/usr/local/Cellar/maven/3.8.2/bin/mvn clean package"
-                    }
-                }
-                sh 'mvn clean package'
+               sh "/usr/local/Cellar/maven/3.8.2/bin/mvn clean package"
             }
         }
         stage('Test') {
