@@ -7,7 +7,8 @@ pipeline {
                     try {
                         sh "mvn --version"
                     } catch (Exception e) {
-                        sh "sudo apt-get -y install maven"
+                        def mvnHome = tool 'Maven'
+                        sh "/usr/local/Cellar/maven/3.8.2/bin/mvn clean package"
                     }
                 }
                 sh 'mvn clean package'
