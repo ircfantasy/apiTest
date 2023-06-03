@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps {
+//             steps {
             try{
             sh "mvn --version"
                       }catch(IOException e){
@@ -10,7 +10,7 @@ pipeline {
                     }
                 sh 'mvn clean package'
 //                 sh "chmod +x mvnw && ./mvnw -B clean test"
-            }
+//             }
         }
         stage('Test') {
             steps {
